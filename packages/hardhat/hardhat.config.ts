@@ -30,7 +30,7 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  defaultNetwork: "localhost",
+  defaultNetwork: "edunetwork",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
@@ -117,6 +117,15 @@ const config: HardhatUserConfig = {
     pgnTestnet: {
       url: "https://sepolia.publicgoods.network",
       accounts: [deployerPrivateKey],
+    },
+    edunetwork: {
+      url: "https://rpc.open-campus-codex.gelato.digital",
+      accounts: [deployerPrivateKey],
+      chainId: 656476,
+      allowUnlimitedContractSize: false,
+      gas: "auto",
+      gasPrice: "auto",
+      // isFork: true,
     },
   },
   // configuration for harhdat-verify plugin
